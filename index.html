@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Insurlution| All your insurances in one account</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav" id="topnav">
+        <img src="img/logo.png" alt="Insurlution" class="nav__logo" id="logo" />
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#section--1">Benefits</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--2">Insurances</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--3">Testimonials</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__title">
+        <h1>Insurlution</h1>
+        <h4>All your insurances in one account</h4>
+        <a class="nav__link btn btn--show-modal" href="#">Preregister now</a>
+      </div>
+
+      <!-- <div class="header__title">
+        <h1>
+          The solution to your <br />
+          paper mess
+        </h1>
+        <h4>Manage your insurances with just a few clicks.</h4>
+        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+        <img
+          src="img/hero.png"
+          class="header__img"
+          alt="Minimalist bank items"
+        />
+      </div> -->
+    </header>
+
+    <section class="section" id="section--1">
+      <div class="section__title">
+        <h2 class="section__description">Benefits</h2>
+        <h3 class="section__header">We've got you covered</h3>
+      </div>
+
+      <div class="benefits">
+        <div class="benefits__feature">
+          <img
+            src="img/feature1.png"
+            data-src="img/feature1.png"
+            alt="fit feature"
+            class="benefits__img"
+          />
+          <h5 class="benefits__header">Find the best fit for your life</h5>
+          <p>
+            You're not sure which insurances you really need? We got you. Answer
+            a few simple question to get your personal coverage recommendation.
+          </p>
+        </div>
+
+        <div class="benefits__feature">
+          <img
+            src="img/feature2.png"
+            data-src="img/feature2.png"
+            alt="Plant"
+            class="benefits__img"
+          />
+          <h5 class="benefits__header">Byebye, papermess</h5>
+          <p>
+            Gone are the times of folders and lost papers. All your insurances
+            and expenses are available at the touch of a button.
+          </p>
+        </div>
+
+        <div class="benefits__feature">
+          <img
+            src="img/feature3.png"
+            data-src="img/feature3.png"
+            alt="Credit card"
+            class="benefits__img"
+          />
+          <h5 class="benefits__header">Stay flexible</h5>
+          <p>
+            Life changes and so do your coverage needs. Compare, buy and cancel
+            your coverage hassle-free with just a few clicks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section--2">
+      <div class="section__title">
+        <h2 class="section__description">Insurances</h2>
+        <h3 class="section__header">Get the coverage you need</h3>
+      </div>
+
+      <div class="insurances">
+        <div class="insurances__tab-container">
+          <button
+            class="btn insurances__tab insurances__tab--1 insurances__tab--active"
+            data-tab="1"
+          >
+            Vehicle
+          </button>
+          <button class="btn insurances__tab insurances__tab--2" data-tab="2">
+            Travel
+          </button>
+          <button class="btn insurances__tab insurances__tab--3" data-tab="3">
+            Liability
+          </button>
+          <button class="btn insurances__tab insurances__tab--4" data-tab="4">
+            Legal Protection
+          </button>
+          <button class="btn insurances__tab insurances__tab--5" data-tab="5">
+            Accident
+          </button>
+          <button class="btn insurances__tab insurances__tab--6" data-tab="6">
+            Contents
+          </button>
+        </div>
+        <div
+          class="insurances__content insurances__content--1 insurances__content--active"
+        >
+          <div class="insurances__icon insurances__icon--1">
+            <svg>
+              <use xlink:href="img/icons.svg#car"></use>
+            </svg>
+          </div>
+          <h5 class="insurances__header">A must for car owners.</h5>
+          <p>
+            A motor vehicle iability insurance covers damage you may cause to
+            third parties with your vehicle. It is compulsory in many countries.
+          </p>
+        </div>
+
+        <div class="insurances__content insurances__content--2">
+          <div class="insurances__icon insurances__icon--2">
+            <svg>
+              <use xlink:href="img/icons.svg#aeroplane"></use>
+            </svg>
+          </div>
+          <h5 class="insurances__header">Travel without any worries.</h5>
+          <p>
+            Wherever you are on your holidays – your travel insurance will cover
+            your expenses for necessary medical treatment.
+          </p>
+        </div>
+        <div class="insurances__content insurances__content--3">
+          <div class="insurances__icon insurances__icon--3">
+            <svg>
+              <use xlink:href="img/icons.svg#shield"></use>
+            </svg>
+          </div>
+          <h5 class="insurances__header">Important for tenants</h5>
+          <p>
+            However, a liability insurance doesn't only cover damage to rental
+            property. It also steps in if you have an accident that results in
+            injury to other people or damage to their property.
+          </p>
+        </div>
+        <div class="insurances__content insurances__content--4">
+          <div class="insurances__icon insurances__icon--4">
+            <svg>
+              <use xlink:href="img/icons.svg#scale"></use>
+            </svg>
+          </div>
+          <h5 class="insurances__header">Disagreements are human.</h5>
+          <p>
+            A legal insurance helps you resolve professional and private
+            disputes. Because justice should not be a question of money.
+          </p>
+        </div>
+        <div class="insurances__content insurances__content--5">
+          <div class="insurances__icon insurances__icon--5">
+            <svg class="icon">
+              <use xlink:href="img/icons.svg#plastered-foot"></use>
+            </svg>
+          </div>
+          <h5 class="insurances__header">Accidents happen!</h5>
+          <p>
+            But some consequences are worse then others. An accident insurance
+            helps you if an accident causes permanent damage to your health.
+          </p>
+        </div>
+        <div class="insurances__content insurances__content--6">
+          <div class="insurances__icon insurances__icon--6">
+            <svg>
+              <use xlink:href="img/icons.svg#house"></use>
+            </svg>
+          </div>
+          <h5 class="insurances__header">Cover your belongings.</h5>
+          <p>
+            A contents insurance takes care of your belongings if they are
+            damaged, for example by fire or tap water - regardless of wether
+            you're a tenant or a homeowner.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section--3">
+      <div class="section__title section__title--testimonials">
+        <h2 class="section__description">Not sure yet?</h2>
+        <h3 class="section__header">See what other users have to say!</h3>
+      </div>
+
+      <div class="slider">
+        <div class="slide slide--1">
+          <div class="testimonial">
+            <h5 class="testimonial__header">Best decision ever!</h5>
+            <blockquote class="testimonial__text">
+              I came to Insurlution without much knowledge on Insurance. I was
+              provided an extremely friendly service with extensive information.
+              I was helped by Patrick for extra cover and by Sascha for
+              Statutory health insurance. I can only recommend. They are
+              efficient with relevant information and pleasant and helpful. I
+              had a million questions and they answered without any hesitation.
+              Very happy with the service.
+            </blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-1.PNG" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Shaun Cerus</h6>
+              <p class="testimonial__location">New York, USA</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide slide--2">
+          <div class="testimonial">
+            <h5 class="testimonial__header">
+              Great staff that knows what's important
+            </h5>
+            <blockquote class="testimonial__text">
+              Tamara was very friendly and extremely sympathetic to my needs as
+              a customer (special times for calls or circumstances). This was
+              perfect customer service. She knows her field very well and I
+              could feel that she indeed wanted the best solution for me. The
+              process from the beginning to the end was very smooth, in addition
+              the response time is very good. I would take out a policy with
+              Insurlution any time in the future.
+            </blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-2.PNG" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Sarah Jones</h6>
+              <p class="testimonial__location">Brighton, UK</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide slide--3">
+          <div class="testimonial">
+            <h5 class="testimonial__header">Unobtrusive and knowledgeable</h5>
+            <blockquote class="testimonial__text">
+              Insurlution is unobtrusive and provides factual assessments of
+              existing insurance policies, not constantly pushing for changes.
+              Requests are addressed on an individual basis and again, I have
+              not experienced any pushing. Insurlution is an honest alternative
+              to other distributors/financial advisors and combines personal
+              responsibility with knowledgeable expertise.
+            </blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-3.PNG" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Jessica Melbourne</h6>
+              <p class="testimonial__location">Berlin, Germany</p>
+            </address>
+          </div>
+        </div>
+
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <ul class="footer__nav">
+        <ul class="footer__sub">
+          <li class="footer__subtitle"><a>Company</a></li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Jobs</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Blog</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Privacy Policy</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Press</a>
+          </li>
+        </ul>
+        <ul class="footer__sub">
+          <li class="footer__subtitle"><a>Social</a></li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Twitter</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Linkedin</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Xing</a>
+          </li>
+        </ul>
+
+        <ul class="footer__sub">
+          <li class="footer__subtitle"><a>Help Center</a></li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">FAQ</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Contact</a>
+          </li>
+        </ul>
+      </ul>
+      <img src="img/Logo1.png" alt="Logo" class="footer__logo" />
+      <p class="footer__copyright">
+        Icons made by
+        <a
+          href="https://www.flaticon.com/authors/dinosoftlabs"
+          title="DinosoftLabs"
+          >DinosoftLabs</a
+        >
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com</a
+        >
+      </p>
+    </footer>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Get notified as soon as our app is available
+      </h2>
+      <form class="modal__form">
+        <label>Email Address</label>
+        <input type="email" />
+        <button class="btn">Next step &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+  </body>
+</html>
