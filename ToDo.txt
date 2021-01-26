@@ -1,9 +1,6 @@
 🔘 App Preregister Modal design
 🔘 Header responsive: Wave wird pixelig ab
-🔘 appSlider responsive
-🔘 testimSlider responsive
-🔘 appSlider und testimSlider -> DRY 
-🔘 appSlider: Slider gegen scrollbares Mockup tauschen?
+🔘 app Slider: Slider gegen scrollbares Mockup tauschen?
 🔘 Nav: Hamburger Menu /responsive   
 🔘 Nav items smooth scrolling y Achse
 🔘 CSS -> SCSS
