@@ -3,14 +3,18 @@
 ///////////////////////////////////////
 // Elements
 
-const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
-const btnCloseModal = document.querySelector('.btn--close-modal');
-const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+
 const header = document.querySelector('.header');
 
 ///////////////////////////////////////
 // Modals
+
+const modal = document.querySelector('.modal');
+const btnsOpenModal = document.querySelector('.btn--show-modal');
+const btnCloseModal = document.querySelector('.btn--close-modal');
+const btnConfirm = document.querySelector('.btn--confirm-modal');
+const modalHeader = document.querySelector('.modal__header');
 
 const openModal = function (e) {
   e.preventDefault();
@@ -23,15 +27,22 @@ const closeModal = function () {
   overlay.classList.add('hidden');
 };
 
-btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
+btnsOpenModal.addEventListener('click', openModal);
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-    closeModal();
-  }
+// document.addEventListener('keydown', function (e) {
+//   if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+//     closeModal();
+//   }
+// });
+
+btnConfirm.addEventListener('click', function () {
+  modalHeader.textContent = 'Thank you for registering!';
+  document.querySelector('.modal__form').classList.add('hidden');
+  btnConfirm.classList.add('hidden');
+  setTimeout(closeModal, 2000);
 });
 
 ////////////////////////////

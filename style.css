@@ -1,15 +1,9 @@
-/* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
-
 :root {
   --color-primary: #018b9d;
-  --color-secondary: #ffcb03;
-  --color-tertiary: #ff585f;
+  --color-secondary: #3f3d56;
   --color-primary-darker: #015661;
-  --color-secondary-darker: #ffbb00;
-  --color-tertiary-darker: #fd424b;
   --color-primary-opacity: #c1e2e7;
-  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
-  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --gradient-primary: linear-gradient(to top left, #018b9d, #015661);
 }
 
 * {
@@ -36,36 +30,15 @@ a {
   color: #fff;
 }
 
-/* GENERAL ELEMENTS */
-
-.header__title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 30vh;
+p {
+  color: #666;
 }
 
-.header__title h1 {
-  font-style: normal;
-  font-weight: bold;
-  color: #eee;
-  font-size: 11vmin;
-  letter-spacing: 0.03em;
-  line-height: 1;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
-  /* margin-bottom: 50px; */
+img {
+  transition: filter 0.5s;
 }
 
-.header__title h4 {
-  font-style: normal;
-  font-weight: bold;
-  color: #eee;
-  font-size: 4vmin;
-  letter-spacing: 0.03em;
-  line-height: 1;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
-}
+/* BUTTON */
 
 .btn {
   display: inline-block;
@@ -88,7 +61,7 @@ a {
 button:focus {
   outline: none;
 }
-
+/* 
 .btn--text {
   display: inline-block;
   background: none;
@@ -101,51 +74,17 @@ button:focus {
   padding-bottom: 2px;
   cursor: pointer;
   transition: all 0.3s;
-}
-
-p {
-  color: #666;
-}
-
-img {
-  transition: filter 0.5s;
-}
+} */
 
 /* NAVIGATION */
-
-@media screen and (max-width: 750px) {
-  .nav {
-    flex-direction: column;
-  }
-
-  .nav .nav__links {
-    flex-direction: column;
-  }
-
-  .benefits {
-    flex-direction: column;
-  }
-
-  .insurances__tab-container {
-    flex-direction: column;
-  }
-}
 
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   padding: 2rem 6rem;
-  margin-bottom: 6rem;
   z-index: 100;
   background-color: rgba(255, 255, 255, 0.6);
-  overflow: hidden;
-}
-
-.nav.sticky {
-  position: fixed;
-  background-color: #3f3d56;
 }
 
 .nav__logo {
@@ -154,7 +93,6 @@ img {
 
 .nav__links {
   display: flex;
-  flex-direction: row;
   align-items: center;
   list-style: none;
 }
@@ -163,8 +101,7 @@ img {
   margin-left: 4rem;
 }
 
-.nav__link:link,
-.nav__link:visited {
+.nav__link:link {
   font-size: 1.7rem;
   font-weight: 400;
   color: #ffffff;
@@ -173,56 +110,58 @@ img {
   transition: all 0.3s;
 }
 
-.nav__link--btn:link,
+/* .nav__link--btn:link,
 .nav__link--btn:visited {
   padding: 0.8rem 2.5rem;
   border-radius: 3rem;
   background-color: var(--color-primary);
   color: #ffffff;
+} */
+
+.nav__link:hover {
+  font-size: 1.8rem;
 }
 
-.nav__link--btn:hover,
-.nav__link--btn:active {
-  color: inherit;
-  background-color: var(--color-primary-darker);
-  color: #ffffff;
+.nav.sticky {
+  position: fixed;
+  background-color: var(--color-secondary);
 }
 
 /* HEADER */
+
 .header {
   height: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: no-repeat url(img/header11.png);
+  background: no-repeat url(img/header1.png);
   background-size: 100% 100%;
 }
 
-h1 {
-  font-size: 5.5rem;
-  line-height: 1.35;
+.header__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 40vmin;
+  color: #eee;
+  letter-spacing: 0.03em;
+  line-height: 1;
 }
 
-h4 {
-  font-size: 2.4rem;
-  font-weight: 500;
+.header__title h1 {
+  font-size: 10vmin;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.header__img {
-  width: 100%;
-  grid-column: 2 / 3;
-  grid-row: 1 / span 4;
-  transform: translateY(-6rem);
+.header__title h4 {
+  font-size: 4vmin;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.highlight {
-  position: relative;
-}
+/* SECTIONS */
 
 .section {
   max-width: 1200px;
-  transition: transform 1s, opacity 1s;
-  margin: 0vh auto 10vh;
+  /* transition: transform 1s, opacity 1s; */
+  margin: 6vh auto;
 }
 
 .section--hidden {
@@ -233,11 +172,8 @@ h4 {
 .section__title {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
   align-items: center;
-  align-content: center;
-  margin-bottom: 10vh;
+  text-align: center;
 }
 
 .section__description {
@@ -245,21 +181,29 @@ h4 {
   font-weight: 600;
   text-transform: uppercase;
   color: var(--color-primary);
-  margin-bottom: 1rem;
 }
 
 .section__header {
   font-size: 4rem;
   line-height: 1.3;
   font-weight: 500;
-  margin: 0vh 3vh;
 }
 
-/* benefits */
+/* BENEFITS */
 .benefits {
   display: flex;
-  padding: 0vh 5vh;
-  justify-content: space-evenly;
+}
+
+.benefits__feature {
+  align-self: center;
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 5vh;
+}
+
+.benefits__header {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
 }
 
 .benefits__img {
@@ -267,41 +211,97 @@ h4 {
   height: 90%;
 }
 
-.benefits__feature {
-  align-self: center;
-  justify-self: center;
-  width: 100%;
-  font-size: 1.5rem;
-  padding: 5vh;
+/* APP */
+
+.benefits__img {
+  width: 90%;
+  height: 90%;
 }
 
-.benefits__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-primary-opacity);
-  height: 5.5rem;
-  width: 5.5rem;
-  border-radius: 50%;
-  margin-bottom: 2rem;
-}
-
-.benefits__icon svg {
-  height: 2.5rem;
-  width: 2.5rem;
-  fill: var(--color-primary);
-}
-
-.benefits__header {
-  font-size: 2rem;
+.app__header {
+  font-size: 2.25rem;
   margin-bottom: 1rem;
 }
 
-/* insurances */
-.insurances {
-  max-width: 1200px;
+.app_slider {
+  max-width: 100rem;
+  height: 1000px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.app_slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+  text-align: center;
+}
+
+.app_slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.app_slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.app_slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.app_dots {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.app_dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.app_dots__dot:last-child {
+  margin: 0;
+}
+
+.app_dots__dot--active {
   background-color: #fff;
-  padding: 0vh 5vh;
+  opacity: 1;
+}
+
+/* INSURANCES*/
+.insurances {
+  background-color: #fff;
+  margin: 5rem;
 }
 
 .insurances__tab-container {
@@ -356,7 +356,7 @@ h4 {
 .insurances__icon svg {
   height: 3.5rem;
   width: 3.5rem;
-  fill: #3f3d56;
+  fill: var(--color-secondary);
 }
 
 .insurances__content p {
@@ -526,7 +526,7 @@ h4 {
 /* FOOTER */
 .footer {
   padding: 4rem;
-  background-color: #3f3d56;
+  background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -634,7 +634,7 @@ h4 {
 
 .btn--show-modal {
   background: var(--color-primary);
-  margin-top: 20px;
+  margin: 2rem;
 }
 
 .btn--close-modal {
@@ -678,90 +678,41 @@ h4 {
   z-index: 20;
 }
 
-/* App section */
+/* RESPONSIVE */
 
-.app__header {
-  font-size: 2.25rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
+@media screen and (max-width: 820px) {
+  .header {
+    height: 40vh;
+    /* background-color: var(--color-primary); */
+    background: no-repeat url(img/header1.png);
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* App slider */
+  .nav .nav__links {
+    flex-direction: column;
+  }
 
-.app_slider {
-  max-width: 100rem;
-  height: 1000px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
+  .benefits {
+    flex-direction: column;
+  }
 
-.app_slide {
-  position: absolute;
-  height: 900px;
-  top: 0;
-  width: 100%;
-  padding: 5vh;
+  .insurances__tab-container {
+    flex-direction: column;
+  }
 
-  /* height: 50rem; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 1s;
-}
+  .insurances__tab {
+    margin: 0;
+  }
 
-.app_slider__btn {
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-
-  border: none;
-  background: rgba(255, 255, 255, 0.7);
-  font-family: inherit;
-  color: #333;
-  border-radius: 50%;
-  height: 5.5rem;
-  width: 5.5rem;
-  font-size: 3.25rem;
-  cursor: pointer;
-}
-
-.app_slider__btn--left {
-  left: 6%;
-  transform: translate(-50%, -50%);
-}
-
-.app_slider__btn--right {
-  right: 6%;
-  transform: translate(50%, -50%);
-}
-
-.app_dots {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.app_dots__dot {
-  border: none;
-  background-color: #b9b9b9;
-  opacity: 0.7;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 50%;
-  margin-right: 1.75rem;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-
-.app_dots__dot:last-child {
-  margin: 0;
-}
-
-.app_dots__dot--active {
-  background-color: #fff;
-  opacity: 1;
+  .insurances__content--active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .insurances__header {
+    text-align: center;
+  }
 }

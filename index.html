@@ -103,7 +103,7 @@
       <div class="section__title">
         <h2 class="section__description">Coming soon</h2>
         <h3 class="section__header">The Insurlution App</h3>
-        <a class="nav__link btn btn--show-modal" href="#">Preregister now</a>
+        <a class="btn btn--show-modal" href="#">Preregister now</a>
       </div>
       <div class="app_slider">
         <div class="app_slide app_slide--1">
@@ -144,8 +144,12 @@
           </div>
         </div>
 
-        <button class="app_slider__btn app_slider__btn--left">&larr;</button>
-        <button class="app_slider__btn app_slider__btn--right">&rarr;</button>
+        <button class="app_slider__btn app_slider__btn--left">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="app_slider__btn app_slider__btn--right">
+          <i class="fas fa-arrow-right"></i>
+        </button>
         <div class="app_dots"></div>
       </div>
     </section>
@@ -329,10 +333,10 @@
         </div>
 
         <button class="testim_slider__btn testim_slider__btn--left">
-          &larr;
+          <i class="fas fa-arrow-left"></i>
         </button>
         <button class="testim_slider__btn testim_slider__btn--right">
-          &rarr;
+          <i class="fas fa-arrow-right"></i>
         </button>
         <div class="testim_dots"></div>
       </div>
@@ -401,7 +405,9 @@
       <form class="modal__form">
         <label>Email Address</label>
         <input type="email" />
-        <button class="btn">Next step &rarr;</button>
+        <button class="btn btn--confirm-modal">
+          Next step <i class="fas fa-arrow-right"></i>
+        </button>
       </form>
     </div>
     <div class="overlay hidden"></div>
