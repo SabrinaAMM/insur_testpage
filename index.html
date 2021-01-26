@@ -10,7 +10,6 @@
       href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
       crossorigin="anonymous"
     />
-
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
       rel="stylesheet"
@@ -22,38 +21,31 @@
   <body>
     <header class="header">
       <nav class="nav" id="topnav">
-        <img src="img/logo.png" alt="Insurlution" class="nav__logo" id="logo" />
+        <img
+          src="img/logo_nav.png"
+          alt="Insurlution"
+          class="nav__logo"
+          id="logo"
+        />
         <ul class="nav__links">
           <li class="nav__item">
             <a class="nav__link" href="#section--1">Benefits</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--2">Insurances</a>
+            <a class="nav__link" href="#section--2">Coming soon</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--3">Testimonials</a>
+            <a class="nav__link" href="#section--3">Insurances</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--4">Testimonials</a>
           </li>
         </ul>
       </nav>
       <div class="header__title">
         <h1>Insurlution</h1>
         <h4>All your insurances in one account</h4>
-        <a class="nav__link btn btn--show-modal" href="#">Preregister now</a>
       </div>
-
-      <!-- <div class="header__title">
-        <h1>
-          The solution to your <br />
-          paper mess
-        </h1>
-        <h4>Manage your insurances with just a few clicks.</h4>
-        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
-        <img
-          src="img/hero.png"
-          class="header__img"
-          alt="Minimalist bank items"
-        />
-      </div> -->
     </header>
 
     <section class="section" id="section--1">
@@ -70,7 +62,7 @@
             alt="fit feature"
             class="benefits__img"
           />
-          <h5 class="benefits__header">Find the best fit for your life</h5>
+          <h5 class="benefits__header">Find the best fit</h5>
           <p>
             You're not sure which insurances you really need? We got you. Answer
             a few simple question to get your personal coverage recommendation.
@@ -108,6 +100,57 @@
     </section>
 
     <section class="section" id="section--2">
+      <div class="section__title">
+        <h2 class="section__description">Coming soon</h2>
+        <h3 class="section__header">The Insurlution App</h3>
+        <a class="nav__link btn btn--show-modal" href="#">Preregister now</a>
+      </div>
+      <div class="app_slider">
+        <div class="app_slide app_slide--1">
+          <div class="app">
+            <h5 class="app__header">All your expenses in a handy overview</h5>
+            <img
+              src="img/iphone1.png"
+              data-src="img/iphone1.png"
+              alt="app profile"
+              class="app__img"
+            />
+          </div>
+        </div>
+
+        <div class="app_slide app_slide--2">
+          <div class="app">
+            <h5 class="app__header">
+              Our intelligent chatbot is here for you - 24/7
+            </h5>
+            <img
+              src="img/iphone2.png"
+              data-src="img/iphone2.png"
+              alt="app chatbot"
+              class="app__img"
+            />
+          </div>
+        </div>
+
+        <div class="app_slide app_slide--3">
+          <div class="app">
+            <h5 class="app__header">Booking coverage has never been easier!</h5>
+            <img
+              src="img/iphone3.png"
+              data-src="img/iphone3.png"
+              alt="app confirmation"
+              class="app__img"
+            />
+          </div>
+        </div>
+
+        <button class="app_slider__btn app_slider__btn--left">&larr;</button>
+        <button class="app_slider__btn app_slider__btn--right">&rarr;</button>
+        <div class="app_dots"></div>
+      </div>
+    </section>
+
+    <section class="section" id="section--3">
       <div class="section__title">
         <h2 class="section__description">Insurances</h2>
         <h3 class="section__header">Get the coverage you need</h3>
@@ -147,7 +190,7 @@
           </div>
           <h5 class="insurances__header">A must for car owners.</h5>
           <p>
-            A motor vehicle iability insurance covers damage you may cause to
+            A motor vehicle liability insurance covers damage you may cause to
             third parties with your vehicle. It is compulsory in many countries.
           </p>
         </div>
@@ -217,14 +260,14 @@
       </div>
     </section>
 
-    <section class="section" id="section--3">
+    <section class="section" id="section--4">
       <div class="section__title section__title--testimonials">
         <h2 class="section__description">Not sure yet?</h2>
         <h3 class="section__header">See what other users have to say!</h3>
       </div>
 
-      <div class="slider">
-        <div class="slide slide--1">
+      <div class="testim_slider">
+        <div class="testim_slide testim_slide--1">
           <div class="testimonial">
             <h5 class="testimonial__header">Best decision ever!</h5>
             <blockquote class="testimonial__text">
@@ -244,7 +287,7 @@
           </div>
         </div>
 
-        <div class="slide slide--2">
+        <div class="testim_slide testim_slide--2">
           <div class="testimonial">
             <h5 class="testimonial__header">
               Great staff that knows what's important
@@ -266,7 +309,7 @@
           </div>
         </div>
 
-        <div class="slide slide--3">
+        <div class="testim_slide testim_slide--3">
           <div class="testimonial">
             <h5 class="testimonial__header">Unobtrusive and knowledgeable</h5>
             <blockquote class="testimonial__text">
@@ -285,9 +328,13 @@
           </div>
         </div>
 
-        <button class="slider__btn slider__btn--left">&larr;</button>
-        <button class="slider__btn slider__btn--right">&rarr;</button>
-        <div class="dots"></div>
+        <button class="testim_slider__btn testim_slider__btn--left">
+          &larr;
+        </button>
+        <button class="testim_slider__btn testim_slider__btn--right">
+          &rarr;
+        </button>
+        <div class="testim_dots"></div>
       </div>
     </section>
 
@@ -331,7 +378,7 @@
           </li>
         </ul>
       </ul>
-      <img src="img/Logo1.png" alt="Logo" class="footer__logo" />
+      <img src="img/logo_footer.png" alt="Logo" class="footer__logo" />
       <p class="footer__copyright">
         Icons made by
         <a
