@@ -14,5 +14,4 @@ Abschließend:
 🔘 reveal at scrolling wieder dekommentieren
 🔘 CSS - >  clean code
 🔘 Metatags
-🔘🎉 Heroku Deployement
 

@@ -14,9 +14,11 @@
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="splide.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Insurlution| All your insurances in one account</title>
     <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -105,52 +107,42 @@
         <h3 class="section__header">The Insurlution App</h3>
         <a class="btn btn--show-modal" href="#">Preregister now</a>
       </div>
-      <div class="app_slider">
-        <div class="app_slide app_slide--1">
-          <div class="app">
-            <h5 class="app__header">All your expenses in a handy overview</h5>
-            <img
-              src="img/iphone1.png"
-              data-src="img/iphone1.png"
-              alt="app profile"
-              class="app__img"
-            />
-          </div>
+      <div class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <h5 class="app__header">All your expenses in a handy overview</h5>
+              <img
+                src="img/iphone1.png"
+                data-src="img/iphone1.png"
+                alt="app profile"
+                class="app__img"
+              />
+            </li>
+            <li class="splide__slide">
+              <h5 class="app__header">
+                Our intelligent chatbot is here for you - 24/7
+              </h5>
+              <img
+                src="img/iphone2.png"
+                data-src="img/iphone2.png"
+                alt="app chatbot"
+                class="app__img"
+              />
+            </li>
+            <li class="splide__slide">
+              <h5 class="app__header">
+                Booking coverage has never been easier!
+              </h5>
+              <img
+                src="img/iphone3.png"
+                data-src="img/iphone3.png"
+                alt="app confirmation"
+                class="app__img"
+              />
+            </li>
+          </ul>
         </div>
-
-        <div class="app_slide app_slide--2">
-          <div class="app">
-            <h5 class="app__header">
-              Our intelligent chatbot is here for you - 24/7
-            </h5>
-            <img
-              src="img/iphone2.png"
-              data-src="img/iphone2.png"
-              alt="app chatbot"
-              class="app__img"
-            />
-          </div>
-        </div>
-
-        <div class="app_slide app_slide--3">
-          <div class="app">
-            <h5 class="app__header">Booking coverage has never been easier!</h5>
-            <img
-              src="img/iphone3.png"
-              data-src="img/iphone3.png"
-              alt="app confirmation"
-              class="app__img"
-            />
-          </div>
-        </div>
-
-        <button class="app_slider__btn app_slider__btn--left">
-          <i class="fas fa-arrow-left"></i>
-        </button>
-        <button class="app_slider__btn app_slider__btn--right">
-          <i class="fas fa-arrow-right"></i>
-        </button>
-        <div class="app_dots"></div>
       </div>
     </section>
 
@@ -269,76 +261,72 @@
         <h2 class="section__description">Not sure yet?</h2>
         <h3 class="section__header">See what other users have to say!</h3>
       </div>
-
-      <div class="testim_slider">
-        <div class="testim_slide testim_slide--1">
-          <div class="testimonial">
-            <h5 class="testimonial__header">Best decision ever!</h5>
-            <blockquote class="testimonial__text">
-              I came to Insurlution without much knowledge on Insurance. I was
-              provided an extremely friendly service with extensive information.
-              I was helped by Patrick for extra cover and by Sascha for
-              Statutory health insurance. I can only recommend. They are
-              efficient with relevant information and pleasant and helpful. I
-              had a million questions and they answered without any hesitation.
-              Very happy with the service.
-            </blockquote>
-            <address class="testimonial__author">
-              <img src="img/user-1.PNG" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Shaun Cerus</h6>
-              <p class="testimonial__location">New York, USA</p>
-            </address>
-          </div>
+      <div class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="testimonial">
+                <h5 class="testimonial__header">Best decision ever!</h5>
+                <blockquote class="testimonial__text">
+                  I came to Insurlution without much knowledge on Insurance. I
+                  was provided an extremely friendly service with extensive
+                  information. I was helped by Patrick for extra cover and by
+                  Sascha for Statutory health insurance. I can only recommend.
+                  They are efficient with relevant information and pleasant and
+                  helpful. I had a million questions and they answered without
+                  any hesitation. Very happy with the service.
+                </blockquote>
+                <address class="testimonial__author">
+                  <img src="img/user-1.PNG" alt="" class="testimonial__photo" />
+                  <h6 class="testimonial__name">Shaun Cerus</h6>
+                  <p class="testimonial__location">New York, USA</p>
+                </address>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="testimonial">
+                <h5 class="testimonial__header">
+                  Great staff that knows what's important
+                </h5>
+                <blockquote class="testimonial__text">
+                  Tamara was very friendly and extremely sympathetic to my needs
+                  as a customer (special times for calls or circumstances). This
+                  was perfect customer service. She knows her field very well
+                  and I could feel that she wanted the best solution for me. The
+                  process from the beginning to the end was smooth, in addition
+                  the response time is very good. I would take out a policy with
+                  Insurlution any time.
+                </blockquote>
+                <address class="testimonial__author">
+                  <img src="img/user-2.PNG" alt="" class="testimonial__photo" />
+                  <h6 class="testimonial__name">Sarah Jones</h6>
+                  <p class="testimonial__location">Brighton, UK</p>
+                </address>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="testimonial">
+                <h5 class="testimonial__header">
+                  Unobtrusive and knowledgeable
+                </h5>
+                <blockquote class="testimonial__text">
+                  Insurlution is unobtrusive and provides factual assessments of
+                  existing insurance policies, not constantly pushing for
+                  changes. Requests are addressed on an individual basis and
+                  again, I have not experienced any pushing. Insurlution is an
+                  honest alternative to other distributors/financial advisors
+                  and combines personal responsibility with knowledgeable
+                  expertise.
+                </blockquote>
+                <address class="testimonial__author">
+                  <img src="img/user-3.PNG" alt="" class="testimonial__photo" />
+                  <h6 class="testimonial__name">Jessica Melbourne</h6>
+                  <p class="testimonial__location">Berlin, Germany</p>
+                </address>
+              </div>
+            </li>
+          </ul>
         </div>
-
-        <div class="testim_slide testim_slide--2">
-          <div class="testimonial">
-            <h5 class="testimonial__header">
-              Great staff that knows what's important
-            </h5>
-            <blockquote class="testimonial__text">
-              Tamara was very friendly and extremely sympathetic to my needs as
-              a customer (special times for calls or circumstances). This was
-              perfect customer service. She knows her field very well and I
-              could feel that she wanted the best solution for me. The process
-              from the beginning to the end was smooth, in addition the response
-              time is very good. I would take out a policy with Insurlution any
-              time.
-            </blockquote>
-            <address class="testimonial__author">
-              <img src="img/user-2.PNG" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Sarah Jones</h6>
-              <p class="testimonial__location">Brighton, UK</p>
-            </address>
-          </div>
-        </div>
-
-        <div class="testim_slide testim_slide--3">
-          <div class="testimonial">
-            <h5 class="testimonial__header">Unobtrusive and knowledgeable</h5>
-            <blockquote class="testimonial__text">
-              Insurlution is unobtrusive and provides factual assessments of
-              existing insurance policies, not constantly pushing for changes.
-              Requests are addressed on an individual basis and again, I have
-              not experienced any pushing. Insurlution is an honest alternative
-              to other distributors/financial advisors and combines personal
-              responsibility with knowledgeable expertise.
-            </blockquote>
-            <address class="testimonial__author">
-              <img src="img/user-3.PNG" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Jessica Melbourne</h6>
-              <p class="testimonial__location">Berlin, Germany</p>
-            </address>
-          </div>
-        </div>
-
-        <button class="testim_slider__btn testim_slider__btn--left">
-          <i class="fas fa-arrow-left"></i>
-        </button>
-        <button class="testim_slider__btn testim_slider__btn--right">
-          <i class="fas fa-arrow-right"></i>
-        </button>
-        <div class="testim_dots"></div>
       </div>
     </section>
 

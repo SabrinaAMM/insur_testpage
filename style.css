@@ -39,7 +39,6 @@ img {
 }
 
 /* BUTTON */
-
 .btn {
   display: inline-block;
   background-color: var(--color-primary);
@@ -61,23 +60,8 @@ img {
 button:focus {
   outline: none;
 }
-/* 
-.btn--text {
-  display: inline-block;
-  background: none;
-  font-size: 1.7rem;
-  font-family: inherit;
-  font-weight: 500;
-  color: var(--color-primary);
-  border: none;
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 2px;
-  cursor: pointer;
-  transition: all 0.3s;
-} */
 
 /* NAVIGATION */
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -110,14 +94,6 @@ button:focus {
   transition: all 0.3s;
 }
 
-/* .nav__link--btn:link,
-.nav__link--btn:visited {
-  padding: 0.8rem 2.5rem;
-  border-radius: 3rem;
-  background-color: var(--color-primary);
-  color: #ffffff;
-} */
-
 .nav__link:hover {
   font-size: 1.8rem;
 }
@@ -128,7 +104,6 @@ button:focus {
 }
 
 /* HEADER */
-
 .header {
   height: 700px;
   background: no-repeat url(img/header1.png);
@@ -157,7 +132,6 @@ button:focus {
 }
 
 /* SECTIONS */
-
 .section {
   max-width: 1200px;
   /* transition: transform 1s, opacity 1s; */
@@ -212,90 +186,9 @@ button:focus {
 }
 
 /* APP */
-
-.benefits__img {
-  width: 90%;
-  height: 90%;
-}
-
 .app__header {
   font-size: 2.25rem;
   margin-bottom: 1rem;
-}
-
-.app_slider {
-  max-width: 100rem;
-  height: 1000px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-.app_slide {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 5vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 1s;
-  text-align: center;
-}
-
-.app_slider__btn {
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-
-  border: none;
-  background: rgba(255, 255, 255, 0.7);
-  font-family: inherit;
-  color: #333;
-  border-radius: 50%;
-  height: 5.5rem;
-  width: 5.5rem;
-  font-size: 3.25rem;
-  cursor: pointer;
-}
-
-.app_slider__btn--left {
-  left: 6%;
-  transform: translate(-50%, -50%);
-}
-
-.app_slider__btn--right {
-  right: 6%;
-  transform: translate(50%, -50%);
-}
-
-.app_dots {
-  position: absolute;
-  bottom: 1%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.app_dots__dot {
-  border: none;
-  background-color: #b9b9b9;
-  opacity: 0.7;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 50%;
-  margin-right: 1.75rem;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-
-.app_dots__dot:last-child {
-  margin: 0;
-}
-
-.app_dots__dot--active {
-  background-color: #fff;
-  opacity: 1;
 }
 
 /* INSURANCES*/
@@ -363,95 +256,16 @@ button:focus {
   grid-column: 2;
 }
 
-/* Testimonial SLIDER */
-.testim_slider {
-  max-width: 100rem;
-  min-height: 50vh;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-.testim_slide {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 5vh;
-
-  /* height: 50rem; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 1s;
-}
-
-.testim_slider__btn {
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-
-  border: none;
-  background: rgba(255, 255, 255, 0.7);
-  font-family: inherit;
-  color: #333;
-  border-radius: 50%;
-  height: 5.5rem;
-  width: 5.5rem;
-  font-size: 3.25rem;
-  cursor: pointer;
-}
-
-.testim_slider__btn--left {
-  left: 6%;
-  transform: translate(-50%, -50%);
-}
-
-.testim_slider__btn--right {
-  right: 6%;
-  transform: translate(50%, -50%);
-}
-
-.testim_dots {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.testim_dots__dot {
-  border: none;
-  background-color: #b9b9b9;
-  opacity: 0.7;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 50%;
-  margin-right: 1.75rem;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-
-.testim_dots__dot:last-child {
-  margin: 0;
-}
-
-.testim_dots__dot--active {
-  background-color: #fff;
-  opacity: 1;
-}
-
 /* TESTIMONIALS */
 .testimonial {
-  width: 65%;
-  position: relative;
-  /* flex-grow: 1; */
+  padding: 5vh;
 }
 
 .testimonial::before {
   content: '\201C';
   position: absolute;
-  top: -5.7rem;
-  left: -6.8rem;
+  top: -2.7rem;
+  left: 1rem;
   line-height: 1;
   font-size: 20rem;
   font-family: inherit;
@@ -499,29 +313,6 @@ button:focus {
 
 .section__title--testimonials {
   margin-bottom: 4rem;
-}
-
-/* SIGNUP */
-.section--sign-up {
-  background-color: #37383d;
-  border-top: none;
-  border-bottom: 1px solid #444;
-  text-align: center;
-  padding: 10rem 3rem;
-}
-
-.section--sign-up .section__header {
-  color: #fff;
-  text-align: center;
-}
-
-.section--sign-up .section__title {
-  margin-bottom: 6rem;
-}
-
-.section--sign-up .btn {
-  font-size: 1.9rem;
-  padding: 2rem 5rem;
 }
 
 /* FOOTER */
@@ -649,12 +440,6 @@ button:focus {
   border: none;
   background: none;
 }
-/* 
-.btn--close-cookie {
-  font-family: inherit;
-  color: #ffffff;
-  font-size: 1.7rem;
-} */
 
 .hidden {
   visibility: hidden;
@@ -694,6 +479,7 @@ button:focus {
 
   .nav .nav__links {
     flex-direction: column;
+    margin-top: 1rem;
   }
 
   .benefits {
@@ -715,9 +501,5 @@ button:focus {
   }
   .insurances__header {
     text-align: center;
-  }
-
-  .testim_slider {
-    height: 70vh;
   }
 }

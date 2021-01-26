@@ -1,11 +1,16 @@
 'use strict';
 
+var elms = document.getElementsByClassName('splide');
+for (var i = 0, len = elms.length; i < len; i++) {
+  new Splide(elms[i], {
+    type: 'loop',
+    perPage: 1,
+    speed: 1000,
+    width: '100%',
+  }).mount();
+}
 ///////////////////////////////////////
 // Elements
-
-const overlay = document.querySelector('.overlay');
-
-const header = document.querySelector('.header');
 
 ///////////////////////////////////////
 // Modals
@@ -14,7 +19,7 @@ const modal = document.querySelector('.modal');
 const btnsOpenModal = document.querySelector('.btn--show-modal');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnConfirm = document.querySelector('.btn--confirm-modal');
-const modalHeader = document.querySelector('.modal__header');
+const overlay = document.querySelector('.overlay');
 
 const openModal = function (e) {
   e.preventDefault();
@@ -39,7 +44,8 @@ overlay.addEventListener('click', closeModal);
 // });
 
 btnConfirm.addEventListener('click', function () {
-  modalHeader.textContent = 'Thank you for registering!';
+  document.querySelector('.modal__header').textContent =
+    'Thank you for registering!';
   document.querySelector('.modal__form').classList.add('hidden');
   btnConfirm.classList.add('hidden');
   setTimeout(closeModal, 2000);
@@ -47,6 +53,8 @@ btnConfirm.addEventListener('click', function () {
 
 ////////////////////////////
 // Cookie Message
+const header = document.querySelector('.header');
+
 const message = document.createElement('div');
 message.classList.add('cookie-message');
 message.innerHTML =
@@ -141,85 +149,85 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 headerObserver.observe(header);
 
 ////////////////////////////
-// App Slider
+// App Slider JS
 
-const appSlider = function () {
-  const slides = document.querySelectorAll('.app_slide');
-  const btnLeft = document.querySelector('.app_slider__btn--left');
-  const btnRight = document.querySelector('.app_slider__btn--right');
-  let currSlide = 0;
-  const maxSlide = slides.length;
-  const dotContainer = document.querySelector('.app_dots');
+// const appSlider = function () {
+//   const slides = document.querySelectorAll('.app_slide');
+//   const btnLeft = document.querySelector('.app_slider__btn--left');
+//   const btnRight = document.querySelector('.app_slider__btn--right');
+//   let currSlide = 0;
+//   const maxSlide = slides.length;
+//   const dotContainer = document.querySelector('.app_dots');
 
-  const createDots = function () {
-    slides.forEach(function (_, i) {
-      dotContainer.insertAdjacentHTML(
-        'beforeend',
-        `<button class="app_dots__dot" data-slide="${i}"></button>`
-      );
-    });
-  };
+//   const createDots = function () {
+//     slides.forEach(function (_, i) {
+//       dotContainer.insertAdjacentHTML(
+//         'beforeend',
+//         `<button class="app_dots__dot" data-slide="${i}"></button>`
+//       );
+//     });
+//   };
 
-  const activateDot = function (slide) {
-    document
-      .querySelectorAll('.app_dots__dot')
-      .forEach(dot => dot.classList.remove('app_dots__dot--active'));
+//   const activateDot = function (slide) {
+//     document
+//       .querySelectorAll('.app_dots__dot')
+//       .forEach(dot => dot.classList.remove('app_dots__dot--active'));
 
-    document
-      .querySelector(`.app_dots__dot[data-slide ="${slide}"]`)
-      .classList.add('app_dots__dot--active');
-  };
+//     document
+//       .querySelector(`.app_dots__dot[data-slide ="${slide}"]`)
+//       .classList.add('app_dots__dot--active');
+//   };
 
-  const goToSlide = function (slide) {
-    slides.forEach(
-      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
-    );
-  };
+//   const goToSlide = function (slide) {
+//     slides.forEach(
+//       (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+//     );
+//   };
 
-  const nextSlide = function () {
-    if (currSlide === maxSlide - 1) {
-      currSlide = 0;
-    } else {
-      currSlide++;
-    }
-    goToSlide(currSlide);
-    activateDot(currSlide);
-  };
+//   const nextSlide = function () {
+//     if (currSlide === maxSlide - 1) {
+//       currSlide = 0;
+//     } else {
+//       currSlide++;
+//     }
+//     goToSlide(currSlide);
+//     activateDot(currSlide);
+//   };
 
-  const prevSlide = function () {
-    if (currSlide === 0) {
-      currSlide = maxSlide - 1;
-    } else {
-      currSlide--;
-    }
-    goToSlide(currSlide);
-    activateDot(currSlide);
-  };
+//   const prevSlide = function () {
+//     if (currSlide === 0) {
+//       currSlide = maxSlide - 1;
+//     } else {
+//       currSlide--;
+//     }
+//     goToSlide(currSlide);
+//     activateDot(currSlide);
+//   };
 
-  const init = function () {
-    goToSlide(0);
-    createDots();
-    activateDot(0);
-  };
-  init();
+//   const init = function () {
+//     goToSlide(0);
+//     createDots();
+//     activateDot(0);
+//   };
+//   init();
 
-  btnRight.addEventListener('click', nextSlide);
-  btnLeft.addEventListener('click', prevSlide);
+//   btnRight.addEventListener('click', nextSlide);
+//   btnLeft.addEventListener('click', prevSlide);
 
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft') prevSlide();
-    if (e.key === 'ArrowRight') nextSlide();
-  });
+//   document.addEventListener('keydown', function (e) {
+//     if (e.key === 'ArrowLeft') prevSlide();
+//     if (e.key === 'ArrowRight') nextSlide();
+//   });
 
-  dotContainer.addEventListener('click', function (e) {
-    if (e.target.classList.contains('app_dots__dot')) {
-      const slide = e.target.dataset.slide;
-      goToSlide(slide);
-      activateDot(slide);
-    }
-  });
-};
-appSlider();
+//   dotContainer.addEventListener('click', function (e) {
+//     if (e.target.classList.contains('app_dots__dot')) {
+//       const slide = e.target.dataset.slide;
+//       goToSlide(slide);
+//       activateDot(slide);
+//     }
+//   });
+// };
+// appSlider();
 
 ////////////////////////////
 // Testimonial Slider
