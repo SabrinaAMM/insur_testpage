@@ -366,7 +366,7 @@ button:focus {
 /* Testimonial SLIDER */
 .testim_slider {
   max-width: 100rem;
-  height: 50vh;
+  min-height: 50vh;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -444,6 +444,7 @@ button:focus {
 .testimonial {
   width: 65%;
   position: relative;
+  /* flex-grow: 1; */
 }
 
 .testimonial::before {
@@ -648,12 +649,12 @@ button:focus {
   border: none;
   background: none;
 }
-
+/* 
 .btn--close-cookie {
   font-family: inherit;
   color: #ffffff;
   font-size: 1.7rem;
-}
+} */
 
 .hidden {
   visibility: hidden;
@@ -714,5 +715,9 @@ button:focus {
   }
   .insurances__header {
     text-align: center;
+  }
+
+  .testim_slider {
+    height: 70vh;
   }
 }
