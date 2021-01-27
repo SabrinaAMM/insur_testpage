@@ -1,5 +1,17 @@
 'use strict';
 
+////////////////////////////
+// Splide Slider
+var elms = document.getElementsByClassName('splide');
+for (var i = 0, len = elms.length; i < len; i++) {
+  new Splide(elms[i], {
+    type: 'loop',
+    perPage: 1,
+    speed: 1000,
+    width: '100%',
+  }).mount();
+}
+
 ///////////////////////////////////////
 // Modals
 
@@ -135,18 +147,6 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 
 headerObserver.observe(header);
-
-////////////////////////////
-// Splide Slider
-var elms = document.getElementsByClassName('splide');
-for (var i = 0, len = elms.length; i < len; i++) {
-  new Splide(elms[i], {
-    type: 'loop',
-    perPage: 1,
-    speed: 1000,
-    width: '100%',
-  }).mount();
-}
 
 //Lazy loading images
 
